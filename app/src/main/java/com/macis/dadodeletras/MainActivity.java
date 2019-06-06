@@ -1,7 +1,9 @@
 package com.macis.dadodeletras;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,6 +33,10 @@ public class MainActivity extends Activity {
             resultado.setText(getString(R.string.finLetras));
             cuadroImagen.setImageResource(R.drawable.abecedario);
             dado.restablecerLetrasUsadas();
+
+            Vibrator mVibrate = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            // Vibrate for 500 milliseconds
+            mVibrate.vibrate(500);
         }
     }
 
