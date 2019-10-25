@@ -11,7 +11,7 @@ public class Dado {
     private char[] letras;
     private boolean[] letrasUsadas;
     private int contadorLetras;
-    private int resultadoInt;
+    private String letraActual;
 
     /**
      * Constructor sin parametros que inicializa todas las variables de instancia
@@ -37,7 +37,7 @@ public class Dado {
         if (!letrasUsadas[tirada]) {
             letrasUsadas[tirada] = true;
             contadorLetras++;
-            resultadoInt = tirada;
+            letraActual = ""+resultado;
             return resultado;
 
         } else {
@@ -70,8 +70,11 @@ public class Dado {
     public int getCantidadLetrasJugadas() {
         return contadorLetras;
     }
-
-    public int getLetraInt() {
-        return resultadoInt;
+    /**
+     * Devuelve la letra actual en juego
+     * @return <code>String</code> La letra actual.
+     */
+    public String getLetraActual() {
+        return letraActual;
     }
 }

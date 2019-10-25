@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dice of Letters</string>
+    <string name="Aplicar">Apply</string>
+    <string name="ScattergoriesOficial">Scattergories: a-z except Q, U, V, X, Y, Z</string>
+    <string name="cuadroImagenDescripcion">Image that shows the playing letter</string>
+    <string name="engranaje">gear</string>
+    <string name="finLetras">All the letters have been played. Starting again.</string>
+    <string name="persoPista">Write the letters without spaces between them</string>
+    <string name="personalizarLetras">Personalized: choose your own set of letter</string>
+    <string name="preferencias">Preferences</string>
+    <string name="seleccionLetras">Selection of playable letters</string>
+    <string name="tirarDado">Roll the dice</string>
+    <string name="todasLetras">All: A-Z</string>
+</resources>

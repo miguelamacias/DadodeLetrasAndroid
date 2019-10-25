@@ -10,7 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Selección de letras jugables" />
+        android:text="@string/seleccionLetras" />
 
     <RadioGroup
         android:id="@+id/grupoRBotones"
@@ -44,7 +44,7 @@
         android:id="@+id/listaLetras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="2dp"
         android:ems="10"
         android:hint="@string/persoPista"
