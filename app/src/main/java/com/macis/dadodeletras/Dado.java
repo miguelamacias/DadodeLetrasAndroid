@@ -3,6 +3,9 @@ package com.macis.dadodeletras;
 import java.security.SecureRandom;
 
 public class Dado {
+    public static final String TODAS_LAS_LETRAS = "abcdefghijklmnopqrstuvwxyz";
+    public static final String LETRAS_SCATTERGORIES = "abcdefghijklmnoprstw";
+
     //Variables de instancia
     private SecureRandom dado;
     private char[] letras;
@@ -14,10 +17,9 @@ public class Dado {
      * Constructor sin parametros que inicializa todas las variables de instancia
      * necesarias para el funcionamiento de la clase.
      */
-    public Dado() {
+    public Dado(String letrasJugables) {
         dado = new SecureRandom();
-        String alfabeto = "abcdefghijklmnopqrstuvwxyz";
-        letras = alfabeto.toCharArray();
+        letras = letrasJugables.toCharArray();
         letrasUsadas = new boolean[letras.length];
         restablecerLetrasUsadas();
         contadorLetras = 0;
@@ -29,7 +31,7 @@ public class Dado {
      * @return <code>char</code> Una letra del abecedario no devuelta anteriormente.
      */
     public char siguienteLetra () {
-        int tirada = dado.nextInt(26);
+        int tirada = dado.nextInt(letras.length);
         char resultado = letras[tirada];
 
         if (!letrasUsadas[tirada]) {

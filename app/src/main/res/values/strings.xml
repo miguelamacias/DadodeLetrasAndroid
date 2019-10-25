@@ -3,4 +3,11 @@
     <string name="tirarDado">Tirar el Dado</string>
     <string name="finLetras">Has usado todas las letras. Se empieza de nuevo.</string>
     <string name="vacio"></string>
+    <string name="preferencias">Preferencias</string>
+    <string name="seleccLetras">Seleccionar las letras jugables</string>
+    <string name="todasLetras">Todas: A-Z</string>
+    <string name="ScattergoriesOficial">Scattergories: todas excepto Ñ, Q, U, V, X, Y, Z</string>
+    <string name="personalizarLetras">Personalizado: introduzca abajo las letras que desea jugar</string>
+    <string name="persoPista">Escriba las letras sin separaciones entre ellas.</string>
+    <string name="Aplicar">Aplicar</string>
 </resources>
