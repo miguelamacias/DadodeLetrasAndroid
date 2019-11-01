@@ -4,28 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/engranaje"
         android:onClick="abrirPreferencias"
         android:scaleType="centerCrop"
-        android:src="@drawable/gear"
-        android:contentDescription="@string/engranaje"/>
+        android:src="@drawable/gear" />
 
     <ImageView
         android:id="@+id/imagenLetra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="120dp"
-        android:src="@drawable/abecedario"
-        android:contentDescription="@string/cuadroImagenDescripcion"/>
+        android:layout_marginTop="80dp"
+        android:contentDescription="@string/cuadroImagenDescripcion"
+        android:src="@drawable/icono_small" />
 
     <Button
-        android:id="@+id/tirarDado"
+        android:id="@+id/btnTirarDado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -41,14 +42,25 @@
         android:gravity="bottom"
         android:orientation="vertical">
 
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
+        <TextView
+            android:id="@+id/letrasJugadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_horizontal"
+            android:text="@string/vacio"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
 
             android:id="@+id/adView"
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             ads:adSize="LARGE_BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
         <!--anuncio real: ca-app-pub-3884237692356988/8028504385!-->
     </LinearLayout>
 
