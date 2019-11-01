@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityOptionsCompat;
 
 public class PreferenciasActivity extends AppCompatActivity {
     private EditText cuadroListaLetras;
@@ -43,7 +44,7 @@ public class PreferenciasActivity extends AppCompatActivity {
         SharedPreferences.Editor editorPreferencias = preferencias.edit();
         String letrasJugables;
 
-        switch (grupoBotones.getCheckedRadioButtonId()){
+        switch (grupoBotones.getCheckedRadioButtonId()) {
             case R.id.rbTodas:
                 letrasJugables = Dado.TODAS_LAS_LETRAS;
                 break;
@@ -62,8 +63,13 @@ public class PreferenciasActivity extends AppCompatActivity {
         editorPreferencias.putString("opcionLetras", letrasJugables);
         editorPreferencias.putInt("rbotonPulsado", grupoBotones.getCheckedRadioButtonId());
         editorPreferencias.putInt("editTextVisible", cuadroListaLetras.getVisibility());
-        editorPreferencias.commit();
+        editorPreferencias.apply();
         Intent mainActivity = new Intent(this, MainActivity.class);
-        startActivity(mainActivity);
+
+        //Añadir un efectillo al abrir la activity nueva
+        ActivityOptionsCompat opciones = ActivityOptionsCompat.
+                makeScaleUpAnimation(view, 0, 0, view.getWidth(), view.getHeight());
+
+        startActivity(mainActivity, opciones.toBundle());
     }
 }

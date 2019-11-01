@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityOptionsCompat;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -85,7 +87,11 @@ public class MainActivity extends Activity {
 
     public void abrirPreferencias(View view) {
         Intent abrirPreferencias = new Intent(this, PreferenciasActivity.class);
-        startActivity(abrirPreferencias);
+        //Añadir un efectillo al abrir la activity nueva
+        ActivityOptionsCompat opciones = ActivityOptionsCompat.
+                makeScaleUpAnimation(view, 0, 0, view.getWidth(), view.getHeight());
+
+        startActivity(abrirPreferencias, opciones.toBundle());
     }
 
 
